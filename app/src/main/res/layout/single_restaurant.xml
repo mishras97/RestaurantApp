@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/five_dp"
+    android:paddingBottom="@dimen/five_dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="@dimen/one_fifty_dp"
+        android:layout_height="@dimen/one_fifty_dp"
+        android:id="@+id/iv_restaurant"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/sample"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_restaurant"
+        app:layout_constraintEnd_toStartOf="@id/tv_ratings"
+        android:layout_margin="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_restaurant_name"
+            android:textSize="@dimen/twenty_two_sp"
+            tools:text="Pizza Hut"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_restaurant_other_details"
+            android:textSize="@dimen/sixteen_sp"
+            android:textColor="@color/blue"
+            tools:text="Well Sanitized kitchen * Temperature checks"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_ratings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/two_dp"
+        android:background="@color/teal_200"
+        android:text="4.3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
